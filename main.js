@@ -45,10 +45,10 @@ function displayMessage() {
         document.forms['formStock']['displayArea'].value = "Hi Proton Members, "
         +"\nHope you benefited from our stock Idea!!"
         
-        +"\n\nStock Name gave +"+Math.ceil(percent)+" % Returns in "+Math.floor(daydiff)+" days."
+        +"\n\nStock Name gave "+Math.ceil(percent)+" % Returns in "+Math.floor(daydiff)+" days."
          
         +"\nProton Tip on "+ date  +" @ Rs. "+priceExit
-        +"\nNOW trading @ Rs. +"+priceToday
+        +"\nNOW trading @ Rs. "+priceToday
         +"\n\n*Proton Equity*\n*Positive learning Positive earning*";
 
     }else{
