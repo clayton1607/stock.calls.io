@@ -76,7 +76,8 @@ function clearVisibility(){
 function copyToClipboard() {
     var copyText = document.getElementById('textArea');
     copyText.select();
-    copyText.setSelectionRange(0, 99999)
+    //copyText.setSelectionRange(0, 99999)
     document.execCommand('copy');
-    alert("Copied the text: " + copyText.value);
+    copyText.remove();
+
   }
