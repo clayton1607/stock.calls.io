@@ -2,14 +2,14 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Proton Equity</title>
     </head>
     <body>
-        <br><br><br><br>
+        <br><br>
         <div class="container">
             <form name="formStock">
                 <div class="form-group">
-                    <label for="callsFormProtonEquity">Select Type of Message</label>
+                    <b><label for="callsFormProtonEquity">Select Type of Message</label></b>
                     <div class="row">
                         <div class="col">
                             <input type="radio" name="stock" value="stockCall" onclick="changeDisplay('stockCall')">
@@ -31,7 +31,7 @@
                 <!-- Only for Stock Purchase Notice -->
                 <div class="container" id="stockCall" style="visibility: hidden;">
                     <div class="form-group">
-                        <label for="callsFormProtonEquity">Enter Range</label>
+                        <b><label for="callsFormProtonEquity">Enter Range</label></b>
                         <div class="row">
                             <div class="col">
                                 <input id="stock-call-start-range" class="form-control" placeholder="Start Range"/>   
@@ -46,11 +46,11 @@
                 <!-- Only for Stock on Fire -> . Price Stock was given at, Now Trading-->
                 <div class="container" id="stockOnFire" style="visibility: hidden;">
                     <div class="form-group">
-                        <label for="callsFormProtonEquity">Enter Date on which Stock was given</label>
+                        <b><label for="callsFormProtonEquity">Enter Date on which Stock was given</label></b>
                         <input type="date" id="stock-exit-date" class="form-control" type="text" id="datepicker"> 
                     </div>
                     <div class="form-group">
-                        <label for="callsFormProtonEquity">Stock Details</label>
+                        <b><label for="callsFormProtonEquity">Stock Details</label></b>
                         <div class="row">
                             <div class="col">
                                 <input id="stock-exit-price" class="form-control" placeholder="Price on which Stock was given"/>   
@@ -65,7 +65,7 @@
                 <!-- For Exit Call-->
                 <div class="container" id="stockExit" style="visibility: hidden;">
                     <div class="form-group">
-                        <label for="callsFormProtonEquity">Exit Details</label>
+                        <b><label for="callsFormProtonEquity">Exit Details</label></b>
                         <div class="row">
                             <div class="col">
                                 <input id="stock-exit-percent" class="form-control" placeholder="Exit Percentage"/>   
@@ -80,7 +80,7 @@
                 <br><br><br>
                 <div class="container">
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Message Generated</label>
+                        <b><label for="exampleFormControlTextarea1">Message Generated</label></b>
                         <textarea name = "displayArea" readonly = "true" class="form-control"  rows="7" id="textArea"></textarea>
                     </div>
                 </div>
