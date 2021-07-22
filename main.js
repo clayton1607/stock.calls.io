@@ -30,7 +30,8 @@ function displayMessage() {
          
         +"\nProton Tip on "+ date  +" @ Rs. "+priceExit
         +"\nNOW trading @ Rs. "+priceToday
-        +"\n\n*Proton Equity*\n*Positive learning Positive earning*";
+        +"\n\n*Proton Equity*\n*Positive learning Positive earning*"
+        +'\n🔥'+'🔥'+'🔥';
 
     }else{
         var exitPercent = document.getElementById('stock-exit-percent').value;
