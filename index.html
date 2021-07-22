@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+        $( function() {
+            $( "#datepicker" ).datepicker();
+        } );
+        </script>
+        
+    </head>
+    <body>
+        <br><br><br><br>
+        <div class="container">
+            <form name="formStock">
+                <div class="form-group">
+                    <label for="callsFormProtonEquity">Select Type of Message</label>
+                    <div class="row">
+                        <div class="col">
+                            <input type="radio" name="stock" value="stockCall" onclick="changeDisplay('stockCall')">
+                            <label for="callsFormProtonEquity">Stock Purchase Notice</label>
+                        </div>
+                        <div class="col">
+                            <input type="radio" name="stock" value="stockOnFire" onclick="changeDisplay('stockOnFire')">
+                            <label for="callsFormProtonEquity">Stock on Fire</label>
+                        </div>
+                        <div class="col">
+                            <input type="radio" name="stock" value="stockExit" onclick="changeDisplay('stockExit')">
+                            <label for="callsFormProtonEquity">Exit Call</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input id="stock-name" class="form-control" placeholder="Enter Stock Name"/>
+                </div>
+                <!-- Only for Stock Purchase Notice -->
+                <div class="container" id="stockCall" style="visibility: hidden;">
+                    <div class="form-group">
+                        <label for="callsFormProtonEquity">Enter Range</label>
+                        <div class="row">
+                            <div class="col">
+                                <input id="stock-call-start-range" class="form-control" placeholder="Start Range"/>   
+                            </div>
+                            <div class="col">
+                                <input id="stock-call-end-range" type="text" class="form-control" placeholder="End Range">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Only for Stock on Fire -> . Price Stock was given at, Now Trading-->
+                <div class="container" id="stockOnFire" style="visibility: hidden;">
+                    <div class="form-group">
+                        <label for="callsFormProtonEquity">Enter Date on which Stock was given</label>
+                        <input id="stock-exit-date" class="form-control" type="text" id="datepicker"> 
+                    </div>
+                    <div class="form-group">
+                        <label for="callsFormProtonEquity">Stock Details</label>
+                        <div class="row">
+                            <div class="col">
+                                <input id="stock-exit-price" class="form-control" placeholder="Price on which Stock was given"/>   
+                            </div>
+                            <div class="col">
+                                <input id="stock-exit-price-today" type="text" class="form-control" placeholder="Today Price">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- For Exit Call-->
+                <div class="container" id="stockExit" style="visibility: hidden;">
+                    <div class="form-group">
+                        <label for="callsFormProtonEquity">Exit Details</label>
+                        <div class="row">
+                            <div class="col">
+                                <input id="stock-exit-percent" class="form-control" placeholder="Exit Percentage"/>   
+                            </div>
+                            <div class="col">
+                                <input id="stock-exit-percent-remaining" type="text" class="form-control" placeholder="Remaining Percentage">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input class="btn btn-primary" class = "requestInfo" type = "button"  value = "Submit" onclick = "displayMessage()" />
+                <br><br><br>
+                <div class="container">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Message Generated</label>
+                        <textarea name = "displayArea" readonly = "true" value = "" class="form-control" id="exampleFormControlTextarea1" rows="5" id="textArea"></textarea>
+                    </div>
+                </div>
+            </form>
+                <button class="btn btn-dark" onclick="copyToClipboard()">Copy Text</button>
+    </div>
+    <script src="main.js"></script>
+    </body>
+</html>
