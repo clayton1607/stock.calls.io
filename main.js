@@ -1,23 +1,4 @@
 function displayMessage() {
-    // var fullName = document.flowerOrderForm.fullName.value;
-
-    // // if/else statements for more information           
-    // if (flowerName == document.flowerOrderForm.flowerTypes.roses) {
-    //     var moreInfo = "https://en.wikipedia.org/wiki/Rose";
-    // } 
-    // else if (flowerName == document.flowerOrderForm.flowerTypes.carnations) {
-    //         var moreInfo = "https://en.wikipedia.org/wiki/Dianthus_caryophyllus";
-    //     } 
-
-    // else if (flowerName == document.flowerOrderForm.flowerTypes.daisies) {
-    //         var moreInfo = "https://en.wikipedia.org/wiki/Asteraceae";
-    //     }           
-
-
-    // document.flowerOrderForm.info.value = 
-    // fullName + ", " + "thank you for your inquiry about " + flowerName + "." + NL
-    // + "Here is a link for more information: " + moreInfo;
-
     var typeValue = document.forms['formStock']['stock'].value;
     var stockName = document.getElementById('stock-name').value;
     console.log(typeValue);
