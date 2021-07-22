@@ -74,17 +74,9 @@ function clearVisibility(){
 }
 
 function copyToClipboard() {
-    var textField = document.createElement('textarea');
-    textField.innerText = text;
-    document.body.appendChild(textField);
-    textField.select();
-    document.execCommand('copy');
-    textField.remove();
-
-    // var copyText = document.getElementById('textArea');
-    // copyText.select();
-    // //copyText.setSelectionRange(0, 99999)
-    // document.execCommand('copy');
-    // copyText.remove();
+    var copyText = document.getElementById("textArea");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999)
+    document.execCommand("copy");
 
   }
