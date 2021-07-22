@@ -26,7 +26,7 @@ function displayMessage() {
         var endRange = document.getElementById('stock-call-end-range').value
         var stockHint = '';
         for (var i = 0; i < stockName.length; i++) {
-            if(i%2 == 0 && i!==0)
+            if(i%3 == 0 && i!==0)
                 stockHint = stockHint +stockName.charAt(i);
             else
                 stockHint = stockHint +'-';
