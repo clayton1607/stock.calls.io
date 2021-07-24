@@ -25,10 +25,14 @@
                             <input type="radio" name="stock" value="stockExit" onclick="changeDisplay('stockExit')">
                             <label for="callsFormProtonEquity">Exit Call</label>
                         </div>
+                        <div class="col">
+                            <input type="radio" name="stock" value="stockHype" onclick="changeDisplay('stockHype')">
+                            <label for="callsFormProtonEquity">Stock Hype for Tmrw</label>
+                        </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <input id="stock-name" class="form-control" placeholder="Enter Stock Name" required/>
+                <div class="form-group" id="stockName" style="visibility: hidden;">
+                    <input id="stock-name" class="form-control" placeholder="Enter Stock Name" />
                     <div class="valid-feedback">
                         Looks good!
                     </div>                  

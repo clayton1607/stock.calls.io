@@ -29,16 +29,20 @@ function displayMessage() {
         +"\n\n"+stockName+" gave "+Math.ceil(percent)+" % Returns in "+Math.floor(daydiff)+" days."
          
         +"\nProton Tip on "+ date  +" @ Rs. "+priceExit
-        +"\nNOW trading @ Rs. "+priceToday
+        +"\nNow trading @ Rs. "+priceToday
         +"\n\n*Proton Equity*\n*Positive learning Positive earning*"
         +'\n🔥'+'🔥'+'🔥';
 
-    }else{
+    }else if(typeValue == 'stockExit'){
         var exitPercent = document.getElementById('stock-exit-percent').value;
         var percentRem = document.getElementById('stock-exit-percent-remaining').value;
         document.forms['formStock']['displayArea'].value = "Hi Proton Members,"
         +"\n\nIf you are holding " +stockName+", Please exit "+ exitPercent +" % of the allocated"
         +"\nNow Remaining = "+percentRem+"%"
+        +"\n\n*Proton Equity*\n*Positive learning Positive earning*";
+    }else if(typeValue == 'stockHype'){
+        document.forms['formStock']['displayArea'].value = "Hi Proton Members,"
+        +"\n\nStay glued in! Tomorrow morning at 9:30 AM a new stock idea will be announced."
         +"\n\n*Proton Equity*\n*Positive learning Positive earning*";
     }
 }
@@ -46,7 +50,12 @@ function displayMessage() {
 function changeDisplay(type) {
     console.log(type);
     clearVisibility();
-    document.getElementById(type).style.visibility = 'visible';
+    if(type == 'stockHype'){
+        document.getElementById('stockName').style.visibility = 'hidden';
+    }else{
+        document.getElementById('stockName').style.visibility = 'visible';
+        document.getElementById(type).style.visibility = 'visible';
+    }
 }
 
 function clearVisibility(){
